@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="normal_button">Normal</string>
+    <string name="advanced_button">Advanced</string>
+    <string name="quit_button">Quit</string>
+    <string name="button_1">C</string>
+    <string name="button_2">(</string>
+    <string name="button_3">)</string>
+    <string name="button_4">/</string>
+    <string name="button_5">7</string>
+    <string name="button_6">8</string>
+    <string name="button_7">9</string>
+    <string name="button_8">X</string>
+    <string name="button_9">4</string>
+    <string name="button_10">5</string>
+    <string name="button_11">6</string>
+    <string name="button_12">-</string>
+    <string name="button_13">1</string>
+    <string name="button_14">2</string>
+    <string name="button_15">3</string>
+    <string name="button_16">+</string>
+    <string name="button_17">0</string>
+    <string name="button_18">,</string>
+    <string name="button_19">=</string>
+
+
+
+</resources>

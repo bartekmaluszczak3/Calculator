@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="TextViewMarginBottom">40dp</dimen>
+    <dimen name="TextViewTextSize">40sp</dimen>
+    <dimen name="TextViewPadding">10dp</dimen>
+</resources>
