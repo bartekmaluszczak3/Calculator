@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#fffff0">
+    android:background="#fffff0"
+    android:orientation="vertical">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="99999"
-        android:textSize="@dimen/TextViewTextSize"
-        android:gravity="end"
-        android:padding="@dimen/TextViewPadding"
         android:layout_marginBottom="@dimen/TextViewMarginBottom"
         android:ellipsize="start"
+        android:gravity="end"
+        android:padding="@dimen/TextViewPadding"
         android:singleLine="true"
+        android:text=""
+        android:textSize="@dimen/TextViewTextSize"
         tools:ignore="MissingConstraints" />
 
     <LinearLayout
@@ -26,26 +27,25 @@
         android:background="#fffff0"
         android:orientation="vertical">
 
-        <LinearLayout
-        style="@style/normalHorizontalLayout">
+        <LinearLayout style="@style/normalHorizontalLayout">
 
             <androidx.appcompat.widget.AppCompatButton
-                style="@style/normalButton"
                 android:id="@+id/buttonC"
+                style="@style/normalButton"
                 android:text="@string/button_1"
                 android:textColor="#ff7433"
                 android:textSize="30sp" />
 
             <androidx.appcompat.widget.AppCompatButton
-                style="@style/normalButton"
                 android:id="@+id/buttonLeftB"
+                style="@style/normalButton"
                 android:text="@string/button_2"
                 android:textColor="@color/black"
                 android:textSize="30sp" />
 
             <androidx.appcompat.widget.AppCompatButton
-                style="@style/normalButton"
                 android:id="@+id/buttonRightB"
+                style="@style/normalButton"
                 android:text="@string/button_3"
                 android:textColor="@color/black"
                 android:textSize="30sp">
@@ -53,8 +53,8 @@
             </androidx.appcompat.widget.AppCompatButton>
 
             <androidx.appcompat.widget.AppCompatButton
-                style="@style/normalButton"
                 android:id="@+id/buttonDiv"
+                style="@style/normalButton"
                 android:text="@string/button_4"
                 android:textColor="#ff7433"
                 android:textSize="30sp">
@@ -64,26 +64,25 @@
 
         </LinearLayout>
 
-        <LinearLayout
-          style="@style/normalHorizontalLayout">
+        <LinearLayout style="@style/normalHorizontalLayout">
 
             <androidx.appcompat.widget.AppCompatButton
-                style="@style/normalButton"
                 android:id="@+id/buttonSeven"
+                style="@style/normalButton"
                 android:text="@string/button_5"
                 android:textColor="@color/black"
                 android:textSize="30sp" />
 
             <androidx.appcompat.widget.AppCompatButton
-                style="@style/normalButton"
                 android:id="@+id/buttonEight"
+                style="@style/normalButton"
                 android:text="@string/button_6"
                 android:textColor="@color/black"
                 android:textSize="30sp" />
 
             <androidx.appcompat.widget.AppCompatButton
-                style="@style/normalButton"
                 android:id="@+id/buttonNine"
+                style="@style/normalButton"
                 android:text="@string/button_7"
                 android:textColor="@color/black"
                 android:textSize="30sp">
@@ -91,8 +90,8 @@
             </androidx.appcompat.widget.AppCompatButton>
 
             <androidx.appcompat.widget.AppCompatButton
-                style="@style/normalButton"
                 android:id="@+id/buttonMul"
+                style="@style/normalButton"
                 android:text="@string/button_8"
                 android:textColor="#ff7433"
                 android:textSize="30sp">
@@ -102,26 +101,25 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            style="@style/normalHorizontalLayout">
+        <LinearLayout style="@style/normalHorizontalLayout">
 
             <androidx.appcompat.widget.AppCompatButton
-                style="@style/normalButton"
                 android:id="@+id/buttonFour"
+                style="@style/normalButton"
                 android:text="@string/button_9"
                 android:textColor="@color/black"
                 android:textSize="30sp" />
 
             <androidx.appcompat.widget.AppCompatButton
-                style="@style/normalButton"
                 android:id="@+id/buttonFive"
+                style="@style/normalButton"
                 android:text="@string/button_10"
                 android:textColor="@color/black"
                 android:textSize="30sp" />
 
             <androidx.appcompat.widget.AppCompatButton
-                style="@style/normalButton"
                 android:id="@+id/buttonSix"
+                style="@style/normalButton"
                 android:text="@string/button_11"
                 android:textColor="@color/black"
                 android:textSize="30sp">
@@ -129,8 +127,8 @@
             </androidx.appcompat.widget.AppCompatButton>
 
             <androidx.appcompat.widget.AppCompatButton
-                style="@style/normalButton"
                 android:id="@+id/buttonSub"
+                style="@style/normalButton"
                 android:text="@string/button_12"
                 android:textColor="#ff7433"
                 android:textSize="30sp">
@@ -140,26 +138,25 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            style="@style/normalHorizontalLayout">
+        <LinearLayout style="@style/normalHorizontalLayout">
 
             <androidx.appcompat.widget.AppCompatButton
-                style="@style/normalButton"
                 android:id="@+id/buttonOne"
+                style="@style/normalButton"
                 android:text="@string/button_13"
                 android:textColor="@color/black"
                 android:textSize="30sp" />
 
             <androidx.appcompat.widget.AppCompatButton
-                style="@style/normalButton"
                 android:id="@+id/buttonTwo"
+                style="@style/normalButton"
                 android:text="@string/button_14"
                 android:textColor="@color/black"
                 android:textSize="30sp" />
 
             <androidx.appcompat.widget.AppCompatButton
-                style="@style/normalButton"
                 android:id="@+id/buttonThree"
+                style="@style/normalButton"
                 android:text="@string/button_15"
                 android:textColor="@color/black"
                 android:textSize="30sp">
@@ -167,8 +164,8 @@
             </androidx.appcompat.widget.AppCompatButton>
 
             <androidx.appcompat.widget.AppCompatButton
-                style="@style/normalButton"
                 android:id="@+id/buttonAdd"
+                style="@style/normalButton"
                 android:text="@string/button_16"
                 android:textColor="#ff7433"
                 android:textSize="30sp">
@@ -178,31 +175,30 @@
 
         </LinearLayout>
 
-        <LinearLayout
-           style="@style/normalHorizontalLayout">
+        <LinearLayout style="@style/normalHorizontalLayout">
 
             <androidx.appcompat.widget.AppCompatButton
-                style="@style/normalButton"
                 android:id="@+id/buttonZero"
+                style="@style/normalButton"
                 android:text="@string/button_17"
                 android:textColor="@color/black"
                 android:textSize="30sp" />
 
             <androidx.appcompat.widget.AppCompatButton
-                style="@style/normalButton"
                 android:id="@+id/buttonDot"
+                style="@style/normalButton"
                 android:text="@string/button_18"
                 android:textColor="@color/black"
                 android:textSize="30sp" />
 
 
             <androidx.appcompat.widget.AppCompatButton
-                style="@style/normalButton"
                 android:id="@+id/buttonEqu"
+                style="@style/normalButton"
+                android:layout_weight="0.6667"
                 android:text="@string/button_19"
                 android:textColor="#ff7433"
-                android:textSize="30sp"
-                android:layout_weight="0.75">
+                android:textSize="30sp">
 
 
             </androidx.appcompat.widget.AppCompatButton>
