@@ -43,7 +43,7 @@ class NormalModeActivity :AppCompatActivity() {
         val buttonSub = findViewById<Button>(R.id.buttonSub)
         val buttonDiv = findViewById<Button>(R.id.buttonDiv)
         val buttonMul = findViewById<Button>(R.id.buttonMul)
-        val buttonLeftB = findViewById<Button>(R.id.buttonLeftB)
+        val buttonLeftB = findViewById<Button>(R.id.buttonChangeSign)
         val buttonRightB = findViewById<Button>(R.id.buttonRightB)
         val buttonDot = findViewById<Button>(R.id.buttonDot)
         val buttonC = findViewById<Button>(R.id.buttonC)

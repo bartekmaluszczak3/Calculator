@@ -37,18 +37,18 @@
                 android:textSize="30sp" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/buttonLeftB"
+                android:id="@+id/buttonChangeSign"
                 style="@style/normalButton"
                 android:text="@string/button_2"
-                android:textColor="@color/black"
+                android:textColor="#ff7433"
                 android:textSize="30sp" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/buttonRightB"
+                android:id="@+id/buttonBackspace"
                 style="@style/normalButton"
                 android:text="@string/button_3"
-                android:textColor="@color/black"
-                android:textSize="30sp">
+                android:textColor="#ff7433"
+                android:textSize="25sp">
 
             </androidx.appcompat.widget.AppCompatButton>
 
