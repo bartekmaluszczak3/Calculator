@@ -1,20 +1,19 @@
 package com.example.calculator
 
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.text.isDigitsOnly
+import org.mariuszgromada.math.mxparser.Expression
 
 class NormalModeActivity :AppCompatActivity() {
-
+    var signFlag : Boolean = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.normal_mode)
 
-
-        // display
-
-        val textView = findViewById<TextView>(R.id.textView)
 
         // Numbers
 
@@ -40,26 +39,70 @@ class NormalModeActivity :AppCompatActivity() {
         //operators
 
         val buttonAdd = findViewById<Button>(R.id.buttonAdd)
+        buttonAdd.setOnClickListener { append("+") }
         val buttonSub = findViewById<Button>(R.id.buttonSub)
+        buttonSub.setOnClickListener { append("-") }
         val buttonDiv = findViewById<Button>(R.id.buttonDiv)
+        buttonDiv.setOnClickListener { append("/") }
         val buttonMul = findViewById<Button>(R.id.buttonMul)
-        val buttonLeftB = findViewById<Button>(R.id.buttonChangeSign)
-        val buttonRightB = findViewById<Button>(R.id.buttonRightB)
+        buttonMul.setOnClickListener { append("*") }
+        val buttonChangeSign = findViewById<Button>(R.id.buttonChangeSign)
+        buttonChangeSign.setOnClickListener { changeSign() }
+        val buttonBackspace = findViewById<Button>(R.id.buttonBackspace)
+        buttonBackspace.setOnClickListener{ backspace() }
         val buttonDot = findViewById<Button>(R.id.buttonDot)
+        buttonDot.setOnClickListener { append(".") }
         val buttonC = findViewById<Button>(R.id.buttonC)
         buttonC.setOnClickListener { clear() }
-
+        val buttonEqu = findViewById<Button>(R.id.buttonEqu)
+        buttonEqu.setOnClickListener { equal() }
     }
 
-
-
-    private fun append(text: String){
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
         val textView = findViewById<TextView>(R.id.textView)
+        outState.putString("value", textView.text.toString())
+        
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        val textView = findViewById<TextView>(R.id.textView)
+        textView.setText(savedInstanceState.getString("value"))
+    }
+
+    private fun equal(){
+        val textView = findViewById<TextView>(R.id.textView)
+        var expression = Expression(textView.text.toString())
+        textView.text = expression.calculate().toString()
+    }
+
+    private fun append(text: String) {
+        val textView = findViewById<TextView>(R.id.textView)
+        if(signFlag) {
+            if(textView.text.equals("") || ! textView.text.last().isDigit()){
+                var newText = "-" + text
+                signFlag = false
+                textView.append(newText)
+                return
+            }
+        }
+
         textView.append(text)
+
     }
 
     private fun clear(){
         val textView = findViewById<TextView>(R.id.textView)
         textView.text = ""
+    }
+
+    private fun backspace(){
+        val textView = findViewById<TextView>(R.id.textView)
+        textView.text = textView.text.substring(0, textView.text.length - 1)
+    }
+
+    private fun changeSign(){
+        signFlag = true
     }
 }
