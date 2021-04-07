@@ -23,7 +23,14 @@
     <string name="button_17">0</string>
     <string name="button_18">,</string>
     <string name="button_19">=</string>
-
-
-
+    <string name="button_20">(</string>
+    <string name="button_21">)</string>
+    <string name="button_22">sin</string>
+    <string name="button_23">cos</string>
+    <string name="button_24">tan</string>
+    <string name="button_25">x^y</string>
+    <string name="button_26">log</string>
+    <string name="button_27">ln</string>
+    <string name="button_28">sqrt</string>
+    <string name="button_29">x^2</string>
 </resources>

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.os.PersistableBundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.text.isDigitsOnly
 import org.mariuszgromada.math.mxparser.Expression
@@ -72,23 +73,31 @@ class NormalModeActivity :AppCompatActivity() {
     }
 
     private fun equal(){
+
         val textView = findViewById<TextView>(R.id.textView)
         var expression = Expression(textView.text.toString())
-        textView.text = expression.calculate().toString()
+        var expr = expression.calculate().toString()
+        if(expr.equals("NaN")){
+            val duration = Toast.LENGTH_SHORT
+            val toast = Toast.makeText(applicationContext, "Invalid expression", duration)
+            toast.show()
+        }
+        textView.text = expr
+
     }
 
     private fun append(text: String) {
         val textView = findViewById<TextView>(R.id.textView)
         if(signFlag) {
-            if(textView.text.equals("") || ! textView.text.last().isDigit()){
+            if(textView.text.equals("") || (! textView.text.last().isDigit() && textView.text.last().toString() != ".")){
                 var newText = "-" + text
-                signFlag = false
                 textView.append(newText)
-                return
-            }
+                }
+            signFlag = false
         }
 
-        textView.append(text)
+        else
+            textView.append(text)
 
     }
 
@@ -103,6 +112,6 @@ class NormalModeActivity :AppCompatActivity() {
     }
 
     private fun changeSign(){
-        signFlag = true
+        signFlag = ! signFlag
     }
 }
