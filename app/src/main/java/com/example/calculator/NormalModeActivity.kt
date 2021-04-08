@@ -63,13 +63,15 @@ class NormalModeActivity :AppCompatActivity() {
         super.onSaveInstanceState(outState)
         val textView = findViewById<TextView>(R.id.textView)
         outState.putString("value", textView.text.toString())
+        outState.putBoolean("flag", signFlag)
         
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
         val textView = findViewById<TextView>(R.id.textView)
-        textView.setText(savedInstanceState.getString("value"))
+        textView.text = savedInstanceState.getString("value")
+        signFlag = savedInstanceState.getBoolean("flag")
     }
 
     private fun equal(){
@@ -82,6 +84,7 @@ class NormalModeActivity :AppCompatActivity() {
             val toast = Toast.makeText(applicationContext, "Invalid expression", duration)
             toast.show()
         }
+        signFlag = false
         textView.text = expr
 
     }
@@ -89,15 +92,16 @@ class NormalModeActivity :AppCompatActivity() {
     private fun append(text: String) {
         val textView = findViewById<TextView>(R.id.textView)
         if(signFlag) {
-            if(textView.text.equals("") || (! textView.text.last().isDigit() && textView.text.last().toString() != ".")){
+            if(textView.text.isEmpty() || (! textView.text.last().isDigit() && textView.text.last().toString() != ".")){
                 var newText = "-" + text
                 textView.append(newText)
+                return
                 }
             signFlag = false
         }
 
-        else
-            textView.append(text)
+
+        textView.append(text)
 
     }
 
@@ -108,7 +112,9 @@ class NormalModeActivity :AppCompatActivity() {
 
     private fun backspace(){
         val textView = findViewById<TextView>(R.id.textView)
-        textView.text = textView.text.substring(0, textView.text.length - 1)
+        if(textView.text.isNotEmpty()) {
+            textView.text = textView.text.substring(0, textView.text.length - 1)
+        }
     }
 
     private fun changeSign(){

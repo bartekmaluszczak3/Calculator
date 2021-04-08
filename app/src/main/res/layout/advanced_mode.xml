@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/TextViewMarginBottom"
-        android:ellipsize="start"
+        android:ellipsize="end"
         android:gravity="end"
         android:padding="@dimen/TextViewPadding"
         android:singleLine="true"
@@ -119,21 +119,21 @@
                 android:id="@+id/buttonLg"
                 style="@style/normalButton"
                 android:text="@string/button_26"
-                android:textColor="@color/black"
+                android:textColor="#ff7433"
                 android:textSize="20sp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/buttonLn"
                 style="@style/normalButton"
                 android:text="@string/button_27"
-                android:textColor="@color/black"
+                android:textColor="#ff7433"
                 android:textSize="20sp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/buttonSqrt"
                 style="@style/normalButton"
                 android:text="@string/button_28"
-                android:textColor="@color/black"
+                android:textColor="#ff7433"
                 android:textSize="20sp">
 
             </androidx.appcompat.widget.AppCompatButton>
